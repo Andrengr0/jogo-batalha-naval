@@ -1,4 +1,4 @@
-public class Destroyer implements Embarcacao {
+public class Destroyer implements EmbarcacaoStrategy {
     private static final String NOME = "Destroyer";
     private static final int TAMANHO = 4;
     private int[] posicaoInicio;

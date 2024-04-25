@@ -99,7 +99,7 @@ public class JogoBatalhaNaval {
                 int linhaFim = Integer.parseInt(partes[3]) - 1;
                 int colunaFim = Integer.parseInt(partes[4]) - 1;
 
-                Embarcacao embarcacao;
+                EmbarcacaoStrategy embarcacao;
                 switch (nomeEmbarcacao) {
                     case "PORTA_AVIOES":
                         embarcacao = new PortaAvioes(linhaIni, colunaIni, linhaFim, colunaFim);

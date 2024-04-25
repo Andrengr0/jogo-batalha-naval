@@ -1,4 +1,4 @@
-public interface Embarcacao {
+public interface EmbarcacaoStrategy {
 
     String getNome();
     int getTamanho();

@@ -21,7 +21,7 @@ public class Tabuleiro {
         }
     }
 
-    public boolean posicionarEmbarcacao(Embarcacao embarcacao, int linhaIni, int colunaIni, int linhaFim, int colunaFim) {
+    public boolean posicionarEmbarcacao(EmbarcacaoStrategy embarcacao, int linhaIni, int colunaIni, int linhaFim, int colunaFim) {
         if (linhaIni < 0 || colunaIni < 0 || linhaFim >= TAMANHO || colunaFim >= TAMANHO) {
             return false; // Coordenadas fora do tabuleiro
         }
@@ -62,5 +62,16 @@ public class Tabuleiro {
         } else {
             return "AGUA";
         }
+    }
+
+    public boolean fimDeJogo() {
+        for (int i = 0; i < TAMANHO; i++) {
+            for (int j = 0; j < TAMANHO; j++) {
+                if (matriz[i][j] == EMBARCACAO) {
+                    return false; // Ainda há embarcações no tabuleiro
+                }
+            }
+        }
+        return true; // Todas as embarcações foram afundadas
     }
 }

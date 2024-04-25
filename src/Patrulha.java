@@ -1,4 +1,4 @@
-public class Patrulha implements Embarcacao {
+public class Patrulha implements EmbarcacaoStrategy {
     private static final String NOME = "PATRULHA";
     private static final int TAMANHO = 2;
     private int[] posicaoInicio;

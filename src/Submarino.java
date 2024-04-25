@@ -1,4 +1,4 @@
-public class Submarino implements Embarcacao {
+public class Submarino implements EmbarcacaoStrategy {
     private static final String NOME = "SUBMARINO";
     private static final int TAMANHO = 3;
     private int[] posicaoInicio;

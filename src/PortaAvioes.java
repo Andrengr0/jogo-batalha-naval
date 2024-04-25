@@ -1,5 +1,5 @@
 
-public class PortaAvioes implements Embarcacao {
+public class PortaAvioes implements EmbarcacaoStrategy {
     private static final String NOME = "PORTA_AVIOES";
     private static final int TAMANHO = 5;
     private int[] posicaoInicio;
