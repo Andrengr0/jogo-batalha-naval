@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Scanner;
 
 public class JogoBatalhaNaval {
@@ -122,7 +119,8 @@ public class JogoBatalhaNaval {
                 }
 
                 if (!tabuleiro.posicionarEmbarcacao(embarcacao, linhaIni, colunaIni, linhaFim, colunaFim)) {
-                    System.out.println("ERRO: Impossível posicionar a embarcação no arquivo " + arquivo);
+                    File f = new File(arquivo);
+                    System.out.println("ERRO LINHA " + numLinha + ": " + f.getName());
                     return null;
                 }
 
