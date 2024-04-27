@@ -40,12 +40,43 @@ public class JogoBatalhaNaval {
                 System.out.println("JOGADA INVALIDA");
                 continue;
             }
+            //Verifica as entradas
+            if(!entrada.matches("\\d+ \\d+")){
+                System.out.println("JOGADA INVALIDA");
+                continue;
+            }
 
             int linha = Integer.parseInt(coordenadas[0]) - 1;
             int coluna = Integer.parseInt(coordenadas[1]) - 1;
 
             // Verifica se as coordenadas estão dentro dos limites do tabuleiro
             if (linha < 0 || linha >= Tabuleiro.getTamanho() || coluna < 0 || coluna >= Tabuleiro.getTamanho()) {
+                System.out.println("JOGADA INVALIDA");
+                continue;
+            }
+
+            //Verifica as jogadas
+            if(!tabuleiroAtaqueJogador1.verificarJogada(linha,coluna)){
+                System.out.println("JOGADA INVALIDA");
+                continue;
+            }
+
+            if(!tabuleiroAtaqueJogador2.verificarJogada(linha,coluna)){
+                System.out.println("JOGADA INVALIDA");
+                continue;
+            }
+
+            if(!tabuleiroAtual.verificarJogada(linha,coluna)){
+                System.out.println("JOGADA INVALIDA");
+                continue;
+            }
+
+            if(!tabuleiroAtaqueAtual.verificarJogada(linha,coluna)){
+                System.out.println("JOGADA INVALIDA");
+                continue;
+            }
+
+            if(!tabuleiroOponente.verificarJogada(linha,coluna)){
                 System.out.println("JOGADA INVALIDA");
                 continue;
             }

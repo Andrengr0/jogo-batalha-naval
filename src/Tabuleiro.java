@@ -2,6 +2,8 @@ public class Tabuleiro {
     private static final int TAMANHO = 15;
     private static final char AGUA = '~';
     private static final char EMBARCACAO = '#';
+    //Tenta Salvar o tiro executado!? 
+    private static final char TIRO_MARCADO = '.'; 
     private char[][] matriz;
 
     public Tabuleiro() {
@@ -59,6 +61,8 @@ public class Tabuleiro {
         if (matriz[linha][coluna] == EMBARCACAO) {
             matriz[linha][coluna] = AGUA;
             return "ACERTOU";
+        } else if (matriz[linha][coluna] == TIRO_MARCADO) {
+            return "TIRO JA EXECUTADO";
         } else {
             return "AGUA";
         }
@@ -74,4 +78,13 @@ public class Tabuleiro {
         }
         return true; // Todas as embarcações foram afundadas
     }
+
+    public boolean verificarJogada(int linha, int coluna) {
+        if (linha < 0 || linha >= Tabuleiro.getTamanho() || coluna < 0 || coluna >= Tabuleiro.getTamanho()) {
+            System.out.println("JOGADA INVÁLIDA");
+            return false;
+        }
+        return true;
+    }
+
 }

@@ -25,12 +25,14 @@ da	embarcação.	Caso	o	jogador	afunde	uma	embarcação,	ele	continua	na	vez.	Ve
 abaixo,	onde	o	jogador	2	afunda	o	Cruzador	do	Jogador	1:
 
 R8)	Caso	um	jogador	entre	com	a	coordenada	de	uma	posição	já	informada	o	jogo	deve	mostrar
-uma	mensagem	de	erro:	"TIRO	JA	EXECUTADO"	e	deve	repetir	a	jogada,	exemplo
+uma	mensagem	de	erro:	"TIRO	JA	EXECUTADO"	e	deve	repetir	a	jogada,	exemplo 
 
-R9)	Caso	o	jogador	entre	com	uma	coordenada	inválida,	ou	seja,	fora	do	tabuleiro	ou	mal	formatada,
+* Tentei ajustar algo na classe Tabuleiro
+
+ X R9)	Caso	o	jogador	entre	com	uma	coordenada	inválida,	ou	seja,	fora	do	tabuleiro	ou	mal	formatada,
 o	jogo	deve	informar	a	mensagem:	"JOGADA	INVALIDA".	Exemplo:
 
-* para "adccd *%#" falta tratar
+* para "adccd *%#" falta tratar - X - Ajustes Feitos
 
 R10)	Quando	um	jogador	afundar	a	última	embarcação	do	adversário	então	o	jogo	deve	indicar	a
 embarcação	que	afundou	e	mostrar	uma	mensagem	que	indica	o	vencedor	e	o	fim	do	jogo.
