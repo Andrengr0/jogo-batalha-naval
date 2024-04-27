@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class JogoBatalhaNaval {
@@ -22,8 +24,14 @@ public class JogoBatalhaNaval {
 
         boolean jogoEmAndamento = true;
         System.out.println("TABULEIROS CARREGADOS COM SUCESSO");
+
+        //Lista para armazenar os tiros dos jogadores
+        List<String> tirosJogador1 = new ArrayList<>();
+        List<String> tirosJogador2 = new ArrayList<>();
+
         Tabuleiro tabuleiroAtaqueJogador1 = new Tabuleiro();
         Tabuleiro tabuleiroAtaqueJogador2 = new Tabuleiro();
+
         Scanner scanner = new Scanner(System.in);
         Tabuleiro tabuleiroAtual = tabuleiroJogador1;
         Tabuleiro tabuleiroAtaqueAtual = tabuleiroAtaqueJogador1;
@@ -54,6 +62,16 @@ public class JogoBatalhaNaval {
                 System.out.println("JOGADA INVALIDA");
                 continue;
             }
+
+            // Verificar se o tiro já foi executado pelo jogador atual
+            List<String> tirosDoJogadorAtual = nomeJogadorAtual.equals("J1") ? tirosJogador1 : tirosJogador2;
+            String coordenadaTiro = linha + " " + coluna;
+            if (tirosDoJogadorAtual.contains(coordenadaTiro)) {
+                System.out.println("TIRO JA EXECUTADO");
+                continue;
+            }
+            // Registrar o tiro como executado
+            tirosDoJogadorAtual.add(coordenadaTiro);
 
             //Verifica as jogadas
             if(!tabuleiroAtaqueJogador1.verificarJogada(linha,coluna)){

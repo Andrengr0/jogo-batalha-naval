@@ -27,7 +27,7 @@ abaixo,	onde	o	jogador	2	afunda	o	Cruzador	do	Jogador	1:
 R8)	Caso	um	jogador	entre	com	a	coordenada	de	uma	posição	já	informada	o	jogo	deve	mostrar
 uma	mensagem	de	erro:	"TIRO	JA	EXECUTADO"	e	deve	repetir	a	jogada,	exemplo 
 
-* Tentei ajustar algo na classe Tabuleiro
+* Ajustei no jogobatalhanaval, utilizando uma lista para salvar o tiro de cada jogador - Analisar melhor o codigo
 
  X R9)	Caso	o	jogador	entre	com	uma	coordenada	inválida,	ou	seja,	fora	do	tabuleiro	ou	mal	formatada,
 o	jogo	deve	informar	a	mensagem:	"JOGADA	INVALIDA".	Exemplo:
