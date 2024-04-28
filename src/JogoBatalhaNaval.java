@@ -110,6 +110,11 @@ public class JogoBatalhaNaval {
             if (tabuleiroOponente.fimDeJogo()) {
                 System.out.println("FIM DE JOGO");
                 System.out.println("VENCEDOR: " + nomeJogadorAtual);
+
+                //Limpar as listas ao fim do jogo
+                tirosJogador1.clear();
+                tirosJogador2.clear();
+
                 jogoEmAndamento = false;
             } else {
                 // Troca de jogador
